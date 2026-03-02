@@ -1,0 +1,148 @@
+::root {
+    --primary-purple: #634C9F;    
+    --primary-yellow: #FAC213;    
+    --primary-blue: #23A6F0;     
+    
+    --text-dark: #252B42;        
+    --text-light: #737373;       
+    --text-white: #FFFFFF;
+    
+    --bg-light: #F5F5F5;          
+    --border-color: #E6E6E6;   
+    --container-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; 
+    color: var(--text-color);
+}
+/* 1. O'zgaruvchilar va Reset */
+:root {
+    --primary-purple: #634C9F;
+    --primary-yellow: #FAC213;
+    --text-dark: #252B42;
+    --text-light: #737373;
+    --white: #FFFFFF;
+    --bg-light: #F5F5F5;
+    --border-color: #E6E6E6;
+    --container-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Google Fonts ulasangiz yaxshi bo'ladi */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 2. Container */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* 3. Header Top (Binafsharang qism) */
+.header-top {
+    background-color: var(--primary-purple);
+    color: var(--white);
+    padding: 10px 0;
+    font-size: 13px;
+}
+
+.header-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 4. Header Main (Logo, Search, Icons) */
+.header-main {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary-purple);
+}
+
+/* Qidiruv qismi */
+.search-bar {
+    flex: 1; /* O'rtadagi bo'shliqni to'ldiradi */
+    display: flex;
+    max-width: 600px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid var(--border-color);
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    background-color: var(--bg-light);
+}
+
+.search-bar button {
+    padding: 0 20px;
+    background-color: var(--primary-purple);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    color: white;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* 5. Navigatsiya menyusi */
+.main-nav {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    padding: 15px 0;
+}
+
+.nav-links li a {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-purple);
+}
