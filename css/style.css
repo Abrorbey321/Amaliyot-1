@@ -1,69 +1,36 @@
-::root {
-    --primary-purple: #634C9F;    
-    --primary-yellow: #FAC213;    
-    --primary-blue: #23A6F0;     
-    
-    --text-dark: #252B42;        
-    --text-light: #737373;       
-    --text-white: #FFFFFF;
-    
-    --bg-light: #F5F5F5;          
-    --border-color: #E6E6E6;   
-    --container-width: 1200px;
+:root {
+    --purple: #634C9F;
+    --green: #2BB673;
+    --dark: #252B42;
+    --gray: #737373;
+    --border: #E6E6E6;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    font-family: sans-serif; 
-    color: var(--text-color);
-}
-/* 1. O'zgaruvchilar va Reset */
-:root {
-    --primary-purple: #634C9F;
-    --primary-yellow: #FAC213;
-    --text-dark: #252B42;
-    --text-light: #737373;
-    --white: #FFFFFF;
-    --bg-light: #F5F5F5;
-    --border-color: #E6E6E6;
-    --container-width: 1200px;
+    background: white;
+    color: var(--dark);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif; /* Google Fonts ulasangiz yaxshi bo'ladi */
-}
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-/* 2. Container */
 .container {
-    max-width: var(--container-width);
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
-    width: 100%;
 }
 
-/* 3. Header Top (Binafsharang qism) */
+
 .header-top {
-    background-color: var(--primary-purple);
-    color: var(--white);
-    padding: 10px 0;
-    font-size: 13px;
+    background: var(--purple);
+    color: white;
+    padding: 8px 0;
+    font-size: 12px;
 }
 
 .header-top .container {
@@ -72,77 +39,945 @@ ul {
     align-items: center;
 }
 
-/* 4. Header Main (Logo, Search, Icons) */
+
+#span {
+    color: orange;
+    font-weight: 600;
+}
+
+.header-buttom {
+    width: 100%;
+    background-color: #F3F3F3;
+}
+
+.header-buttom ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding: 12px 0;
+    gap: 20px;
+}
+
+
 .header-main {
     padding: 20px 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border);
 }
 
 .header-main .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--primary-purple);
+.tagma-tag {
+    display: grid;
+    padding-left: 10px;
 }
 
-/* Qidiruv qismi */
-.search-bar {
-    flex: 1; /* O'rtadagi bo'shliqni to'ldiradi */
+#all {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.search-container {
+    flex: 1;
+    max-width: 550px;
     display: flex;
-    max-width: 600px;
+    background: #F3F3F3;
+    border-radius: 8px;
+    margin: 0 40px;
 }
 
-.search-bar input {
-    width: 100%;
-    padding: 12px 20px;
-    border: 1px solid var(--border-color);
-    border-right: none;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    background-color: var(--bg-light);
-}
-
-.search-bar button {
-    padding: 0 20px;
-    background-color: var(--primary-purple);
+.search-container input {
+    flex: 1;
     border: none;
-    border-radius: 0 5px 5px 0;
+    background: transparent;
+    padding: 12px;
+    outline: none;
+}
+
+.search-btn {
+    border: none;
+    padding-right: 15px;
+    background: transparent;
     cursor: pointer;
-    color: white;
 }
 
 .header-icons {
     display: flex;
     gap: 20px;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
+    text-decoration: none;
 }
+.header-icons a {
+    color: var(--dark);
+    text-decoration: none;}
 
-/* 5. Navigatsiya menyusi */
+
 .main-nav {
-    background-color: var(--white);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-bottom: 1px solid var(--border);
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 25px;
+    list-style: none;
     padding: 15px 0;
+    justify-content: center; 
 }
 
-.nav-links li a {
-    font-size: 15px;
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
     font-weight: 600;
-    color: var(--text-dark);
-    transition: color 0.3s;
+    font-size: 14px;
 }
 
-.nav-links li a:hover {
-    color: var(--primary-purple);
+.nav-links a.active {
+    color: var(--purple);
+}
+
+
+.hero-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: -50px;
+    align-items: flex-start;
+}
+
+.sidebar-menu {
+    width: 260px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 0 0 8px 8px;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.menu-header {
+    background: white;
+    padding: 15px 20px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 14px;
+    border-bottom: 1px solid #F9F9F9;
+}
+
+.sidebar-menu ul li a:hover {
+    background: #F8F8F8;
+    color: var(--purple);
+}
+
+.hero-banner {
+    flex: 1;
+    margin-top: 70px;
+    background: #F3F9FB url('../images/slider-01.jpg.png') no-repeat right center;
+    background-size: cover;
+    border-radius: 12px;
+    padding: 60px;
+    min-height: 480px;
+}
+
+.discount-badge {
+    background: #E5F8ED;
+    color: var(--green);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    max-width: 450px;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    color: var(--gray);
+    font-size: 14px;
+    max-width: 400px;
+    margin-bottom: 30px;
+}
+
+.hero-action {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.shop-now {
+    background: var(--purple);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.price .now {
+    font-size: 26px;
+    font-weight: 800;
+    color: #FF4E4E;
+}
+
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.feat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.feat-card strong {
+    display: block;
+    color: var(--dark);
+}
+
+.feat-card p {
+    color: var(--gray);
+    font-size: 11px;
+}
+
+
+footer {
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--gray);
+    font-size: 13px;
+}
+
+
+@media (max-width: 980px) {
+
+    .header-top .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .header-buttom ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-main .container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .search-container {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .header-icons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .hero-wrapper {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .sidebar-menu {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .hero-banner {
+        margin-top: 0;
+        padding: 40px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-banner {
+        padding: 30px;
+        background-position: bottom right;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-action {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .shop-now {
+        width: 100%;
+    }
+}
+
+
+.payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    width: 350px;
+    height: 100px;
+    border: #737373 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+.childrens{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}.childrens p{
+    color: var(--gray);
+    font-size: 13px;
+}
+.childrens b{
+    color: var(--dark);
+    font-size: 16px;
+    font-weight: 600;
+}
+.payment-image{
+    width: 60px;
+    height: 60px;
+}
+.payment-team{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+.hero {
+    background-color: #E6E0F3; 
+    padding: 50px 10%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.badge {
+    background-color: #D4EDDA;
+    color: #28A745;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h1 {
+    color: #3C1E70; 
+    font-size: 48px;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.price-action {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.shop-btn {
+    background-color: #5D3EBC;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.current-price {
+    color: #D32F2F;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #777;
+    margin-left: 10px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+.sidebar-menu {
+    width: 280px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #753ac6ce;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.menu-header:hover {
+    background-color: #235494;
+}
+
+.arrow {
+    transition: transform 0.3s;
+    font-size: 12px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.menu-list li {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+.menu-list li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: all 0.2s;
+}
+
+.menu-list li a span {
+    color: #ccc;
+    font-weight: bold;
+}
+
+.menu-list li a:hover {
+    background-color: #f9f9f9;
+    color: #2b4eb6;
+    padding-left: 25px; 
+}
+
+.menu-list li a:hover span {
+    color: #2b57b6;
+}
+
+
+#menu-toggle:checked ~ .menu-list {
+    max-height: 580px; 
+    padding-bottom: 10px;
+}
+
+#menu-toggle:checked ~ .menu-header .arrow {
+    transform: rotate(180deg);
+}
+
+
+.promo-banners {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+}
+.containerr {
+    width: 93%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.banner-card {
+    position: relative;
+    border-radius: 12px;
+    background-image: url(../images/banner-01.jpg.png);
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    min-height: 220px;
+    transition: transform 0.3s;
+}
+.background-image-1{
+    background-image: url(../images/banner-01.jpg.png);
+}
+.background-image-2{
+    background-image: url(../images/banner-02.jpg.png);
+}
+.background-image-3{
+    background-image: url(../images/banner-03.jpg.png);
+}
+
+.banner-card:hover {
+    transform: translateY(-5px);
+}
+
+.orange-light { background-color: #FDF4EC; }
+.green-light { background-color: #F1F8F1; }
+.gray-light { background-color: #F3F4F6; }
+
+.top-label {
+    color: #FF6B00;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.banner-text h2 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: var(--dark);
+    max-width: 180px;
+    line-height: 1.3;
+}
+
+.banner-text p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-shop {
+    display: inline-block;
+    background: white;
+    color: var(--dark);
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.banner-card img {
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Sarlavha qismi */
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+.section-title { font-size: 22px; font-weight: 700; color: #252B42; }
+.section-subtitle { font-size: 13px; color: #737373; margin-top: 5px; }
+.view-all-btn { 
+    font-size: 14px; 
+    font-weight: 600; 
+    color: #634C9F; 
+    border: 1px solid #E6E6E6; 
+    padding: 8px 15px; 
+    border-radius: 20px;
+}
+
+/* Mahsulotlar Setkasi */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Figma'dagidek 6 ta ustun */
+    gap: 15px;
+}
+
+.product-card {
+    border: 1px solid #E6E6E6;
+    border-radius: 12px;
+    padding: 15px;
+    background: #fff;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Silliq animatsiya */
+}
+
+/* HOVER EFFEKTI: Soya va ko'tarilish */
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: #634C9F;
+    z-index: 2;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #FF4E4E;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.product-img {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product-img img {
+    max-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.1); /* Rasm kattalashishi */
+}
+
+.organic-tag {
+    font-size: 10px;
+    font-weight: 700;
+    color: #2BB673;
+    display: block;
+    margin: 10px 0;
+}
+
+.p-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #252B42;
+    height: 40px;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+.new-price { font-size: 18px; font-weight: 800; color: #FF4E4E; }
+.old-price { font-size: 13px; color: #BDBDBD; margin-left: 5px; }
+
+.add-cart-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #634C9F;
+    background: transparent;
+    color: #634C9F;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-cart-btn:hover {
+    background: #634C9F;
+    color: #fff;
+}
+
+/* Promo Bannerlar */
+.promo-section { margin-top: 40px; }
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.promo-card {
+    padding: 30px;
+    border-radius: 12px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+    transition: 0.4s;
+}
+
+.promo-card:hover { transform: scale(1.02); }
+
+.promo-sub { color: #FF4E4E; font-size: 12px; font-weight: 700; }
+.promo-card h3 { font-size: 18px; margin: 15px 0; color: #252B42; line-height: 1.3; }
+.promo-card p { font-size: 13px; color: #737373; margin-bottom: 20px; }
+
+.promo-btn {
+    width: fit-content;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Bannerlar uchun turli fonlar (O'zingizni rasmlaringizni qo'ying) */
+.bg-1 { background-image: url(../images/banner-05.jpg.png); }
+.bg-2 { background-image: url(../images/banner-06.jpg.png); }
+.bg-3 { background-image: url(../images/banner-05.jpg.png); }
+.bg-4 { background-image: url(../images/banner-07.jpg.png); }
+
+
+
+
+
+:root {
+    --purple: #634C9F;
+    --red: #D51243;
+    --green: #71C94E;
+    --gray-text: #71778E;
+    --border-color: #E2E4EB;
+}
+
+.product-card {
+    width: 240px;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 15px;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    border-color: var(--purple);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* Tepasidagi chegirma nishoni */
+.discount-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--red);
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+/* Tepasidagi yotqizilgan yulduzcha */
+.card-star {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    color: #E2E4EB;
+    font-size: 18px;
+    transform: rotate(20deg);
+}
+
+/* Rasm qismi */
+.product-img {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.product-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* O'ng tarafdagi kichik switch tugmasi */
+.card-switch {
+    position: absolute;
+    right: 15px;
+    top: 180px; /* Rasmdan biroz pastroqda */
+    width: 26px;
+    height: 14px;
+    background: #F3F3F3;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 2px;
+}
+
+.switch-dot {
+    width: 10px;
+    height: 10px;
+    background: #FFB800; /* Sariq nuqta */
+    border-radius: 50%;
+    margin-left: auto; /* O'ngga surilgan holati */
+}
+
+/* Ma'lumotlar qismi */
+.tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.tag.organic {
+    background: #EAF7E6;
+    color: var(--green);
+}
+
+.product-title {
+    font-size: 15px;
+    color: #202435;
+    margin: 12px 0;
+    font-weight: 600;
+    line-height: 1.4;
+    height: 42px;
+    overflow: hidden;
+}
+
+/* Reyting */
+.rating-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.stars { color: #FFB800; font-size: 12px; letter-spacing: -2px; }
+.star.empty { color: #E2E4EB; }
+.rating-number { color: #C2C5D1; font-size: 12px; }
+
+/* Narx */
+.price-box {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.current-price {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--red);
+}
+
+.old-price {
+    font-size: 14px;
+    color: #C2C5D1;
+    text-decoration: line-through;
+}
+
+/* Savatchaga qo'shish tugmasi */
+.add-to-cart-btn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--purple);
+    color: var(--purple);
+    padding: 10px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.add-to-cart-btn:hover {
+    background: var(--purple);
+    color: white;
+}
+
+.btn-dot {
+    position: absolute;
+    right: 15px;
+    width: 4px;
+    height: 4px;
+    background: currentColor;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.prodact-cardss{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 90%;
+    gap: 20px;
+    justify-content: space-around;
+
 }

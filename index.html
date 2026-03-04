@@ -1,54 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>amaliyot-1</title>
-<link rel="stylesheet" href="./css/style.css">
-
+    <title>ShopStore - Ecommerce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-   <header>
-    <div class="header-top">
+
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <p>FREE delivery & 40% Discount for next 3 orders! Place your 1st order in.</p>
+                <div class="timer">Until the end of the sale: <strong>47 days 08 hours...</strong></div>
+            </div>
+        </div>
+        <div class="header-buttom">
+            <ul>
+                <li>About Us</li>
+                <li>My account</li>
+                <li>Wishlist</li>
+                <li>We deliver to you every day from <span id="span">7:00 to 23:00</span></li>
+            </ul>
+        </div>
+
+        <div class="header-main">
+            <div class="container">
+                <img src="./images/logo.png" alt="">
+                <div class="tagma-tag">
+                    <h4 id="all">Deliver to</h4>
+                    <h3 id="all">all</h3>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search for products, categories or brands...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="header-icons">
+                    <a href="#">👤 Account</a>
+                    <a href="#">❤️ Wishlist (0)</a>
+                    <a href="#">🛒 Cart (0)</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Fruits & Vegetables</a></li>
+                    <li><a href="#">Beverages</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
         <div class="container">
-            <p>FREE delivery & 40% Discount for next 3 orders! Place your 1st order in.</p>
-            <div class="timer">Until the end of the sale: <strong>47 days 08 hours...</strong></div>
+            <div class="hero-wrapper">
+                <aside class="sidebar-menu">
+                    <input type="checkbox" id="menu-toggle" hidden>
+
+                    <label for="menu-toggle" class="menu-header">
+                        <span>☰ All Categories</span>
+                        <span class="arrow">▼</span>
+                    </label>
+
+                    <ul class="menu-list">
+                        <li><a href="#">🍎 Fruits & Vegetables <span>›</span></a></li>
+                        <li><a href="#">🥩 Meats & Seafood <span>›</span></a></li>
+                        <li><a href="#">🥛 Breakfast & Dairy <span>›</span></a></li>
+                        <li><a href="#">🍞 Breads & Bakery <span>›</span></a></li>
+                        <li><a href="#">🥤 Beverages <span>›</span></a></li>
+                        <li><a href="#">❄️ Frozen Foods <span>›</span></a></li>
+                        <li><a href="#">🍪 Biscuits & Snacks <span>›</span></a></li>
+                        <li><a href="#">🥫 Grocery & Staples <span>›</span></a></li>
+                        <li><a href="#">🧼 Household Needs <span>›</span></a></li>
+                        <li><a href="#">🏥 Healthcare <span>›</span></a></li>
+                    </ul>
+                </aside>
+
+                <section class="hero-banner">
+                    <div class="hero-content">
+                        <span class="discount-badge">Weekend Discount</span>
+                        <h1>Get the best quality products at the lowest prices</h1>
+                        <p>We have prepared special discounts for you on grocery products. Don't miss these
+                            opportunities...</p>
+                        <div class="hero-action">
+                            <button class="shop-now">Shop Now</button>
+                            <div class="price">
+                                <span class="now">$27.99</span>
+                                <del>$56.67</del>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+
+
         </div>
-    </div>
-    <div class="header-main">
-    <div class="container">
-        <a href="#" class="logo">ShopStore</a>
-        
-        <div class="search-bar">
-            <input type="text" placeholder="Search for products...">
-            <button><i class="search-icon">🔍</i></button>
+    </main>
+
+    <section class="payment-team">
+        <div class="payment">
+            <img class="payment-image" src="./images/SVG.png" alt="">
+            <div class="childrens">
+                <b>Payment only online</b>
+                <p> Tasigförsamhet beteendedesign. Mobile <br>
+                    checkout. Ylig kärrtorpa.</p>
+            </div>
+
+        </div>
+        <div class="payment">
+            <img class="payment-image" src="./images/SVG.png" alt="">
+            <div class="childrens">
+                <b>Payment only online</b>
+                <p> Tasigförsamhet beteendedesign. Mobile <br>
+                    checkout. Ylig kärrtorpa.</p>
+            </div>
+
+        </div>
+        <div class="payment">
+            <img class="payment-image" src="./images/SVG.png" alt="">
+            <div class="childrens">
+                <b>Payment only online</b>
+                <p> Tasigförsamhet beteendedesign. Mobile <br>
+                    checkout. Ylig kärrtorpa.</p>
+            </div>
+
+        </div>
+        <div class="payment">
+            <img class="payment-image" src="./images/SVG.png" alt="">
+            <div class="childrens">
+                <b>Payment only online</b>
+                <p> Tasigförsamhet beteendedesign. Mobile <br>
+                    checkout. Ylig kärrtorpa.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="containerr">
+        <div class="promo-banners">
+            <div class="banner-card orange-light background-image-1">
+                <div class="banner-text">
+                    <span class="top-label">Only This Week</span>
+                    <h2>Quality eggs at an affordable price</h2>
+                    <p>Eat one every day</p>
+                    <a href="#" class="btn-shop">Shop Now &rarr;</a>
+                </div>
+            </div>
+
+            <div class="banner-card green-light background-image-2">
+                <div class="banner-text">
+                    <span class="top-label">Only This Week</span>
+                    <h2>Snacks that nourishes our mind and body</h2>
+                    <p>Shine the morning...</p>
+                    <a href="#" class="btn-shop">Shop Now &rarr;</a>
+                </div>
+            </div>
+
+            <div class="banner-card gray-light background-image-3">
+                <div class="banner-text">
+                    <span class="top-label">Only This Week</span>
+                    <h2>Unbeatable quality, unbeatable prices.</h2>
+                    <p>Only this week. Don't miss...</p>
+                    <a href="#" class="btn-shop">Shop Now &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="prodact-cardss">
+        <div class="product-card">
+            <span class="discount-badge">59%</span>
+
+            <div class="card-star">✦</div>
+
+            <div class="product-img">
+                <img src="./images/582.png" alt="Cantaloupe Melon">
+            </div>
+
+            <div class="card-switch">
+                <span class="switch-dot"></span>
+            </div>
+
+            <div class="product-info">
+                <span class="tag organic">🌿 ORGANIC</span>
+                <h3 class="product-title">Cantaloupe Melon Fresh Organic Cut</h3>
+
+                <div class="rating-box">
+                    <div class="stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <span class="rating-number">3</span>
+                </div>
+
+                <div class="price-box">
+                    <span class="current-price">$1.25</span>
+                    <span class="old-price">$2.98</span>
+                </div>
+
+                <button class="add-to-cart-btn">
+                    Add to cart
+                    <span class="btn-dot"></span>
+                </button>
+            </div>
         </div>
 
-        <div class="header-icons">
-            <a href="#">Account</a>
-            <a href="#">Wishlist (0)</a>
-            <a href="#">Cart (0)</a>
+        <div class="product-card">
+            <span class="discount-badge">59%</span>
+
+            <div class="card-star">✦</div>
+
+            <div class="product-img">
+                <img src="./images/582.png" alt="Cantaloupe Melon">
+            </div>
+
+            <div class="card-switch">
+                <span class="switch-dot"></span>
+            </div>
+
+            <div class="product-info">
+                <span class="tag organic">🌿 ORGANIC</span>
+                <h3 class="product-title">Cantaloupe Melon Fresh Organic Cut</h3>
+
+                <div class="rating-box">
+                    <div class="stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <span class="rating-number">3</span>
+                </div>
+
+                <div class="price-box">
+                    <span class="current-price">$1.25</span>
+                    <span class="old-price">$2.98</span>
+                </div>
+
+                <button class="add-to-cart-btn">
+                    Add to cart
+                    <span class="btn-dot"></span>
+                </button>
+            </div>
         </div>
-    </div>
-</div>
-</header>
-<nav class="main-nav">
-    <div class="container">
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Fruits & Vegetables</a></li>
-            <li><a href="#">Beverages</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-<main></main>
+
+        <div class="product-card">
+            <span class="discount-badge">59%</span>
+
+            <div class="card-star">✦</div>
+
+            <div class="product-img">
+                <img src="./images/582.png" alt="Cantaloupe Melon">
+            </div>
+
+            <div class="card-switch">
+                <span class="switch-dot"></span>
+            </div>
+
+            <div class="product-info">
+                <span class="tag organic">🌿 ORGANIC</span>
+                <h3 class="product-title">Cantaloupe Melon Fresh Organic Cut</h3>
+
+                <div class="rating-box">
+                    <div class="stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <span class="rating-number">3</span>
+                </div>
+
+                <div class="price-box">
+                    <span class="current-price">$1.25</span>
+                    <span class="old-price">$2.98</span>
+                </div>
+
+                <button class="add-to-cart-btn">
+                    Add to cart
+                    <span class="btn-dot"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <span class="discount-badge">59%</span>
+
+            <div class="card-star">✦</div>
+
+            <div class="product-img">
+                <img src="./images/582.png" alt="Cantaloupe Melon">
+            </div>
+
+            <div class="card-switch">
+                <span class="switch-dot"></span>
+            </div>
+
+            <div class="product-info">
+                <span class="tag organic">🌿 ORGANIC</span>
+                <h3 class="product-title">Cantaloupe Melon Fresh Organic Cut</h3>
+
+                <div class="rating-box">
+                    <div class="stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <span class="rating-number">3</span>
+                </div>
+
+                <div class="price-box">
+                    <span class="current-price">$1.25</span>
+                    <span class="old-price">$2.98</span>
+                </div>
+
+                <button class="add-to-cart-btn">
+                    Add to cart
+                    <span class="btn-dot"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <span class="discount-badge">59%</span>
+
+            <div class="card-star">✦</div>
+
+            <div class="product-img">
+                <img src="./images/582.png" alt="Cantaloupe Melon">
+            </div>
+
+            <div class="card-switch">
+                <span class="switch-dot"></span>
+            </div>
+
+            <div class="product-info">
+                <span class="tag organic">🌿 ORGANIC</span>
+                <h3 class="product-title">Cantaloupe Melon Fresh Organic Cut</h3>
+
+                <div class="rating-box">
+                    <div class="stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <span class="rating-number">3</span>
+                </div>
+
+                <div class="price-box">
+                    <span class="current-price">$1.25</span>
+                    <span class="old-price">$2.98</span>
+                </div>
+
+                <button class="add-to-cart-btn">
+                    Add to cart
+                    <span class="btn-dot"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-section">
+        <div class="container">
+            <div class="promo-grid">
+                <div class="promo-card bg-1">
+                    <span class="promo-sub">Only This Week</span>
+                    <h3>Provides you experienced quality products</h3>
+                    <p>Feed your family the best</p>
+                    <button class="promo-btn">Shop Now →</button>
+                </div>
+                <div class="promo-card bg-2">
+                    <span class="promo-sub">Only This Week</span>
+                    <h3>Shopping with us for better quality and the best price</h3>
+                    <p>Only this week. Don't miss...</p>
+                    <button class="promo-btn">Shop Now →</button>
+                </div>
+                <div class="promo-card bg-3">
+                    <span class="promo-sub">Only This Week</span>
+                    <h3>Get the best quality products at the lowest prices</h3>
+                    <p>A different kind of grocery store</p>
+                    <button class="promo-btn">Shop Now →</button>
+                </div>
+                <div class="promo-card bg-4">
+                    <span class="promo-sub">Only This Week</span>
+                    <h3>Where you get your all favorite brands under one roof</h3>
+                    <p>Only this week. Don't miss...</p>
+                    <button class="promo-btn">Shop Now →</button>
+                </div>
+            </div>
+        </div>
 
 
 
-<footer></footer>
+
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 ShopStore. All rights reserved.</p>
+        </div>
+    </footer>
+
 
 </body>
+
 </html>
