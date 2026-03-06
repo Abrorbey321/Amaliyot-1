@@ -1327,3 +1327,75 @@ h1 {
 }
 
 
+/* --- MEDIA QUERIES --- */
+
+/* Planshetlar uchun (992px dan kichik bo'lganda) */
+@media (max-width: 992px) {
+    .oraliq {
+        grid-template-columns: repeat(2, 1fr); /* 3 tadan 2 tagacha kamayadi */
+        gap: 15px;
+    }
+}
+
+/* Kichik planshet va katta telefonlar uchun (768px dan kichik bo'lganda) */
+@media (max-width: 768px) {
+    .shop-item {
+        width: 100%; /* To'liq eniga moslashadi */
+        max-width: 450px; /* Haddan tashqari kengayib ketmasligi uchun */
+        height: auto; /* Balandlik ichidagi narsaga qarab o'sadi */
+        flex-direction: column; /* Rasm tepada, matn pastda bo'ladi */
+        padding: 1.5rem;
+        margin: 20px auto;
+    }
+
+    .shop-item__visual {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .shop-item__details {
+        width: 100%;
+    }
+
+    .promo-footer {
+        position: static; /* Absolyut joylashuvni bekor qilamiz */
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    .oraliq {
+        grid-template-columns: 1fr; /* Hammasi bittadan ustun bo'ladi */
+    }
+}
+
+/* Kichik telefonlar uchun (480px dan kichik bo'lganda) */
+@media (max-width: 480px) {
+    .shop-item__name {
+        font-size: 1.3rem; /* Sarlavha biroz kichrayadi */
+    }
+
+    .shop-item__price-new {
+        font-size: 1.8rem;
+    }
+
+    .time-block {
+        font-size: 14px;
+        padding: 8px 4px 30px 4px; /* Taymer bloklari kichrayadi */
+    }
+}
+@media (max-width: 768px) {
+    /* Rasm konteynerini kichraytiramiz */
+    .shop-item__visual {
+        max-height: 250px; /* Balandlikni o'zingizga yoqqanicha cheklang */
+        margin-bottom: 10px;
+    }
+
+    /* Rasmni o'zini konteynerga moslaymiz */
+    .shop-item__img {
+        width: auto;
+        height: 100%;
+        max-height: 200px; /* Rasm juda katta bo'lib ketmaydi */
+        object-fit: contain;
+        margin: 0.5rem 0;
+    }
+}
